@@ -28,11 +28,15 @@ module.exports = function (router) {
                 console.log(error);
             }
             else {
-                // res.render("all")
                 res.json(found);
             }
         });
     });
+
+    router.get("/saved", function (req, res) {
+        res.render("saved")
+    });
+
 
     router.get("/scrape", function(req, res) {
         // Make a request via axios for the news section of `ycombinator`
@@ -67,7 +71,7 @@ module.exports = function (router) {
         });
       
         // Send a "Scrape Complete" message to the browser
-        res.send("Scrape Complete");
+        res.render("scrape");
       });
 
 }

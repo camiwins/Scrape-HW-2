@@ -4,9 +4,8 @@ var expressHandlebars = require("express-handlebars");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 
-
 // PORT SETUP
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3001;
 
 // INITIATE EXPRESS
 var app = express();
@@ -40,3 +39,4 @@ mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true 
 app.listen(PORT, function () {
     console.log("Listening on port:" + PORT);
 });
+
